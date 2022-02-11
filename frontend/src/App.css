@@ -1,0 +1,14 @@
+.App {
+}
+
+.App-logo {
+  pointer-events: none;
+  text-align: left;
+  width: 30vw;
+}
+
+.header {
+  width: 100%;
+  text-align: center;
+  color: #222;
+}
