@@ -1,4 +1,4 @@
-import { render, screen } from "@testing-library/react";
+import { act, render, screen } from "@testing-library/react";
 import App from "./App";
 
 const data = [
@@ -15,12 +15,12 @@ beforeEach(() => {
   fetch.resetMocks();
 });
 
-test("displays a list of launches", () => {
+test("displays a list of launches", async () => {
   fetch.mockResponseOnce(JSON.stringify({ data }));
-  render(<App />);
+  await act(async () => {
+    render(<App />);
+  });
   expect(screen.getByText(/falcon 9/i)).toBeInTheDocument();
   expect(screen.getByText(/dragon/i)).toBeInTheDocument();
   expect(screen.getByText(/Vandenberg Air Force Base/i)).toBeInTheDocument();
 });
-
-test("updates rocket name");
