@@ -1,5 +1,5 @@
 {
-  "name": "IPL Rocket Backend",
+  "name": "rocket-backend",
   "version": "1.0.0",
   "description": "",
   "main": "server.js",
